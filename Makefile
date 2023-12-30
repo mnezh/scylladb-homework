@@ -2,6 +2,10 @@ SCYLLA_VERSION?=latest
 SCYLLA_NAME?=some-scylla
 NODE_IP=docker exec -it $(SCYLLA_NAME) nodetool status | grep -e "^UN" | awk '{print $$2}'
 
+.PHONY: help
+help:
+	@grep -e '^[a-z].*:' Makefile | sort | awk -F : '{print "- "$$1}'
+
 setup: venv
 
 venv: requirements.txt
