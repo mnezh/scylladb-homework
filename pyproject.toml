@@ -1,0 +1,6 @@
+[tool.ruff]
+select = ["ARG", "B", "C", "C4", "E", "F", "I", "ICN", "N", "PLC", "PLE", "PLR", "PLW", "Q", "RET", "RUF", "SIM", "W", "YTT"]
+line-length = 88
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = ["F401"]
